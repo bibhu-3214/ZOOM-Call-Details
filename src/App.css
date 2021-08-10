@@ -1,9 +1,0 @@
-.tableDesign {
-  border: 1px rgb(31, 25, 25);
-}
-tr,
-th,
-td {
-  border: 1px solid black;
-  text-align: left;
-}

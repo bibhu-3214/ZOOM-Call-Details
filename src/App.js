@@ -20,33 +20,25 @@ const App = (props) => {
     setShow(false);
   };
   return (
-    <div>
+    <>
       {show ? (
-        <>
-          <div className="mb-3">
-            <form onSubmit={handleSubmit}>
-              <input
-                type="file"
-                className="form-control"
-                id="formFile"
-                onChange={handleChange}
-              />
-              <div className="d-grid gap-2 col-6 mx-auto my-2">
-                <input
-                  className="btn btn-primary"
-                  type="submit"
-                  value="upload"
-                ></input>
-              </div>
-            </form>
-          </div>
-        </>
+        <div className="container m-3 p-3">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="file"
+              className="form-control mb-3"
+              id="formFile"
+              onChange={handleChange}
+            />
+            <input className="btn btn-primary" type="submit" value="upload" />
+          </form>
+        </div>
       ) : (
-        <div className="container-fluid">
+        <div className="container">
           <FileDetails data={data} />
         </div>
       )}
-    </div>
+    </>
   );
 };
 
